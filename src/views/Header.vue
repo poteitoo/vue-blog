@@ -1,31 +1,38 @@
 <template>
-  <nav class="header" id="nav">
-    <p>hello</p>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-</template>
+  <v-navigation-drawer permanent app>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title class="title"> Application </v-list-item-title>
+        <v-list-item-subtitle> subtext </v-list-item-subtitle>
+      </v-list-item-content>
+    </v-list-item>
 
+    <v-divider></v-divider>
+
+    <v-list dense nav>
+      <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item-icon>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
+</template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-@Component({
-  components: {},
-})
-export default class Header extends Vue {}
-</script>
-
-<style lang="scss" scope>
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+@Component
+export default class Header extends Vue {
+  items: { [title: string]: string }[] = [
+    { title: "活動記録" },
+    { title: "お知らせ" },
+    { title: "NSSについて" },
+    { title: "NSS運営サイト" },
+    { title: "お問い合わせ" },
+  ];
 }
-</style>
+</script>

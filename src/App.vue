@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Header />
+    <Sidebar />
     <v-main>
       <router-view />
       <Footer />
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import Header from "@/views/Header";
 import Footer from "@/views/Footer";
+import Sidebar from "@/views/Sidebar";
 
 export default {
   name: "app",
-  components: { Header, Footer },
+  components: { Footer, Sidebar },
 };
 </script>
 

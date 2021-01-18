@@ -1,5 +1,5 @@
 <template>
-  <v-footer app class="footer"><p>world</p></v-footer>
+  <v-footer app class="footer"></v-footer>
 </template>
 
 <script lang="ts">

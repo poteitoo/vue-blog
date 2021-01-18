@@ -2,15 +2,17 @@
   <v-app>
     <Sidebar />
     <v-main>
-      <router-view />
-      <Footer />
+      <v-container fluid id="content">
+        <router-view></router-view>
+      </v-container>
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script>
-import Footer from "@/views/Footer";
 import Sidebar from "@/views/Sidebar";
+import Footer from "@/views/Footer";
 
 export default {
   name: "app",
@@ -25,5 +27,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+#content {
+  padding: 0;
 }
 </style>

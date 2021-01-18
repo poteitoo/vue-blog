@@ -2,8 +2,8 @@
   <v-navigation-drawer permanent app>
     <v-list-item>
       <v-list-item-content>
-        <v-list-item-title class="title"> Application </v-list-item-title>
-        <v-list-item-subtitle> subtext </v-list-item-subtitle>
+        <v-list-item-title class="title"> ISEF.jp </v-list-item-title>
+        <v-list-item-subtitle> NSSが運営しています </v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 
@@ -28,11 +28,11 @@ import { Component, Vue } from "vue-property-decorator";
 @Component
 export default class Header extends Vue {
   items: { [title: string]: string }[] = [
-    { title: "活動記録" },
-    { title: "お知らせ" },
-    { title: "NSSについて" },
-    { title: "NSS運営サイト" },
-    { title: "お問い合わせ" },
+    { title: "ISEFとは" },
+    { title: "体験記" },
+    { title: "ISEFのルール" },
+    { title: "賞の種類" },
+    { title: "受賞情報" },
   ];
 }
 </script>

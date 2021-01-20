@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import "normalize.css";
 import Sidebar from "@/views/Sidebar";
 import Footer from "@/views/Footer";
 
@@ -21,6 +22,9 @@ export default {
 </script>
 
 <style lang="scss">
+a {
+  text-decoration: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

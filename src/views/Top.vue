@@ -1,9 +1,6 @@
 <template>
   <div class="top">
-    <img
-      alt="nss top picture"
-      src="../assets/privates/images/cropped-header.jpg"
-    />
+    <img alt="nss top picture" src="../assets/privates/images/top_header.jpg" />
     <MarkDownText :markdown="content" />
   </div>
 </template>

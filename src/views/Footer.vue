@@ -4,9 +4,10 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import MarkDownText from "@/components/MarkDownText.vue";
 
 @Component({
-  components: {},
+  components: { MarkDownText },
 })
 export default class Footer extends Vue {}
 </script>

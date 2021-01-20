@@ -1,5 +1,5 @@
 <template>
-  <div v-html="compiledMarkdown"></div>
+  <div class="container__docs" v-html="compiledMarkdown"></div>
 </template>
 
 <script lang="ts">
@@ -26,3 +26,9 @@ export default class MarkDownText extends Vue {
   //   }
 }
 </script>
+<style>
+.container__docs {
+  padding: 0 30px;
+  margin-top: 15px;
+}
+</style>

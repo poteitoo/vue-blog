@@ -1,12 +1,27 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app>
+    <Header />
+    <Sidebar />
+    <v-main>
+      <v-container fluid id="contesnt">
+        <router-view></router-view>
+      </v-container>
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
+
+<script>
+import "normalize.css";
+import Sidebar from "@/views/Sidebar";
+import Footer from "@/views/Footer";
+import Header from "@/views/Header";
+
+export default {
+  name: "app",
+  components: { Header, Footer, Sidebar },
+};
+</script>
 
 <style lang="scss">
 #app {

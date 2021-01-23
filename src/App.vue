@@ -3,7 +3,7 @@
     <Header />
     <Sidebar />
     <v-main>
-      <v-container fluid id="content">
+      <v-container fluid id="contesnt">
         <router-view></router-view>
       </v-container>
     </v-main>
@@ -24,17 +24,24 @@ export default {
 </script>
 
 <style lang="scss">
-a {
-  text-decoration: none;
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
+  text-align: center;
   color: #2c3e50;
 }
-#content {
-  padding: 0;
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>

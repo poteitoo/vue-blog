@@ -1,7 +1,6 @@
 <template>
   <div class="top">
     <img alt="nss top picture" src="../assets/privates/images/top_header.jpg" />
-    <MarkDownText :markdown="content" />
     <iframe
       width="560"
       height="315"
@@ -10,20 +9,18 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+    <div class="markdown" v-html="contentHTML"></div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import MarkDownText from "@/components/MarkDownText.vue";
-@Component({
-  components: { MarkDownText },
-})
+import docs from "@/assets/privates/docs/rules.md";
+
+@Component
 export default class Home extends Vue {
-  private content = `
-  ## hello
-  # world
-  `;
+  // webpackがコンパイル時にmarkdownを自動でhtmlに変換してくれる
+  private contentHTML = docs;
 }
 </script>
 

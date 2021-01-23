@@ -7,12 +7,12 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Top",
+    name: "top",
     component: Top,
   },
   {
     path: "/about",
-    name: "About",
+    name: "about",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -21,27 +21,35 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/experience-note",
-    name: "ExperienceNonte",
+    name: "experience-note",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/ExperienceNonte.vue"),
+      import(
+        /* webpackChunkName: "experience-note" */ "../views/ExperienceNote.vue"
+      ),
   },
   {
     path: "/rules",
-    name: "Rules",
+    name: "rules",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Rules.vue"),
+      import(/* webpackChunkName: "rules" */ "../views/Rules.vue"),
   },
   {
     path: "/awards",
-    name: "Awards",
+    name: "awards",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Awards.vue"),
+      import(/* webpackChunkName: "awards" */ "../views/Awards.vue"),
   },
   {
     path: "/winners",
-    name: "Winners",
+    name: "winners",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Winners.vue"),
+      import(/* webpackChunkName: "winners" */ "../views/Winners.vue"),
+  },
+  {
+    path: "/test",
+    name: "test",
+    component: () =>
+      import(/* webpackChunkName: "winners" */ "../views/_Test.vue"),
   },
 ];
 

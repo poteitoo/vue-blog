@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <Header />
     <Sidebar />
     <v-main>
       <v-container fluid id="content">
@@ -14,10 +15,11 @@
 import "normalize.css";
 import Sidebar from "@/views/Sidebar";
 import Footer from "@/views/Footer";
+import Header from "@/views/Header";
 
 export default {
   name: "app",
-  components: { Footer, Sidebar },
+  components: { Header, Footer, Sidebar },
 };
 </script>
 

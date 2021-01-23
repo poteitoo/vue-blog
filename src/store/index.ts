@@ -1,11 +1,11 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import { IUiLayoutInfoState } from "./uiLayoutInfo";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+export interface State {
+  uiLayoutInfo: IUiLayoutInfoState;
+}
+
+export default new Vuex.Store<State>({});
